@@ -3,7 +3,6 @@ version: "1.0"
 slug: cupsik
 description: A CUPS print server with working AirPrint
 arch:
-  - x86-64
   - amd64
   - aarch64
 usb: true
