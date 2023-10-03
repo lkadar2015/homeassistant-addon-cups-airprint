@@ -6,6 +6,7 @@ LABEL io.hass.version="1.0" io.hass.type="addon" io.hass.arch="aarch64|amd64"
 SHELL ["/bin/bash", "-o", "pipefail", "-c"]
 
 RUN apt-get update
+RUN apt-get install -y apt-transport-https
 RUN apt-get install -y --no-install-recommends \
         sudo \
         locales \
