@@ -5,8 +5,8 @@ LABEL io.hass.version="1.0" io.hass.type="addon" io.hass.arch="aarch64|amd64"
 # Set shell
 SHELL ["/bin/bash", "-o", "pipefail", "-c"]
 
-RUN apt-get update \
-    && apt-get install -y --no-install-recommends \
+RUN apt-get update
+RUN apt-get install -y --no-install-recommends \
         sudo \
         locales \
         cups \
@@ -27,9 +27,9 @@ RUN apt-get update \
         nano \
         samba \
         bash-completion \
-        procps \
-    && apt-get clean -y \
-    && rm -rf /var/lib/apt/lists/*
+        procps
+RUN apt-get clean -y
+RUN rm -rf /var/lib/apt/lists/*
 
 COPY rootfs /
 
