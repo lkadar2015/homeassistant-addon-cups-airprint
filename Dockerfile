@@ -8,7 +8,6 @@ SHELL ["/bin/bash", "-o", "pipefail", "-c"]
 RUN chmod 755 /usr/bin/dpkg
 RUN apt-get update
 RUN apt-get install -y apt-transport-https
-RUN apt-get install -y sudo
 RUN apt-get install -y --no-install-recommends locales
 RUN apt-get install -y --no-install-recommends cups
 RUN apt-get install -y --no-install-recommends avahi-daemon
@@ -29,6 +28,7 @@ RUN apt-get install -y --no-install-recommends nano
 RUN apt-get install -y --no-install-recommends samba
 RUN apt-get install -y --no-install-recommends bash-completion
 RUN apt-get install -y --no-install-recommends procps
+RUN apt-get install -y --no-install-recommends sudo
 RUN apt-get clean -y
 RUN rm -rf /var/lib/apt/lists/*
 
