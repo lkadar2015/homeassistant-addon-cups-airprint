@@ -7,8 +7,7 @@ SHELL ["/bin/bash", "-o", "pipefail", "-c"]
 
 RUN chmod 755 /usr/bin/dpkg
 RUN apt-get update
-RUN apt-get install -y --no-install-recommends --allow-releaseinfo-change \
-        sudo \
+RUN apt-get install -y --no-install-recommends \
         locales \
         cups \
         avahi-daemon \
