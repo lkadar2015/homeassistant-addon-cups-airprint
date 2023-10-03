@@ -6,7 +6,7 @@ LABEL io.hass.version="1.0" io.hass.type="addon" io.hass.arch="aarch64|amd64"
 SHELL ["/bin/bash", "-o", "pipefail", "-c"]
 
 RUN apt-get update
-RUN apt-get install -y \
+RUN apt-get install -y --no-install-recommends --allow-releaseinfo-change \
         sudo \
         locales \
         cups \
