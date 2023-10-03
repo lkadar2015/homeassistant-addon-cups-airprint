@@ -6,7 +6,6 @@ LABEL io.hass.version="1.0" io.hass.type="addon" io.hass.arch="aarch64|amd64"
 # Set shell
 # SHELL ["/bin/bash", "-o", "pipefail", "-c"]
 
-RUN chmod 755 /usr/bin/dpkg
 RUN apt-get update
 RUN apt-get install -y --no-install-recommends sudo
 RUN apt-get install -y --no-install-recommends locales
